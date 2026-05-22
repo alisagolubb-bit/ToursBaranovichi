@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://ваш-домен/index.html</loc><priority>1.0</priority></url>
+  <url><loc>https://ваш-домен/about.html</loc></url>
+  <url><loc>https://ваш-домен/contacts.html</loc></url>
+  <url><loc>https://ваш-домен/tour1.html</loc></url>
+  <url><loc>https://ваш-домен/tour2.html</loc></url>
+  <url><loc>https://ваш-домен/tour3.html</loc></url>
+  <url><loc>https://ваш-домен/tour4.html</loc></url>
+  <url><loc>https://ваш-домен/tour5.html</loc></url>
+  <url><loc>https://ваш-домен/developer.html</loc></url>
+  <url><loc>https://ваш-домен/privacy.html</loc></url>
+  <url><loc>https://ваш-домен/sitemap.html</loc></url>
+</urlset>

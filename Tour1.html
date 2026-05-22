@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тур: Легенды железной дороги | Барановичи</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Дополнительные стили для страницы тура */
+        .tour-hero {
+            background: linear-gradient(135deg, #1e4a2f 0%, #2c7a4d 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .tour-hero h1 {
+            color: white;
+            background: none;
+            -webkit-background-clip: unset;
+        }
+        .tour-detail {
+            padding: 4rem 0;
+        }
+        .tour-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        .tour-images img {
+            width: 100%;
+            border-radius: 28px;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-md);
+        }
+        .tour-info-block h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .price-box {
+            background: var(--green-light);
+            padding: 1.5rem;
+            border-radius: 28px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--green-deep);
+        }
+        .booking-form {
+            background: var(--warm-gray);
+            padding: 2rem;
+            border-radius: 32px;
+            margin-top: 2rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--green-soft);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            .tour-detail-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">Tour<span>Baranovichi</span></div>
+            <nav><ul class="nav-menu"><li><a href="index.html">Главная</a></li><li><a href="index.html#tours">Туры</a></li><li><a href="index.html#about">О нас</a></li><li><a href="index.html#contacts">Контакты</a></li></ul></nav>
+            <div class="mobile-toggle"><span></span><span></span><span></span></div>
+        </div>
+    </header>
+
+    <section class="tour-hero">
+        <div class="container">
+            <h1>Легенды железной дороги</h1>
+            <p>Погружение в историю Барановичского железнодорожного узла</p>
+        </div>
+    </section>
+
+    <section class="tour-detail">
+        <div class="container">
+            <div class="tour-detail-grid">
+                <div class="tour-images">
+                    <img src="ph15.jpg" alt="ЖД вокзал">
+                    <img src="ph14.jpg" alt="Депо">
+                </div>
+                <div class="tour-info-block">
+                    <h2>Описание тура</h2>
+                    <p>Барановичи — город, выросший вокруг железной дороги. На этой экскурсии вы узнаете о строительстве легендарной магистрали, увидите старинный вокзал (памятник архитектуры), посетите локомотивное депо и услышите истории о героях-железнодорожниках.</p>
+                    <h3>📌 Программа:</h3>
+                    <ul>
+                        <li>Прогулка по привокзальной площади и старинным путям</li>
+                        <li>История Барановичей как стратегического узла</li>
+                        <li>Посещение музея железной дороги (опционально)</li>
+                        <li>Фото у ретро-поездов</li>
+                    </ul>
+                    <div class="price-box">
+                        <div class="price">35 BYN / чел</div>
+                        <p>Длительность: 2.5 часа | Группа до 15 чел</p>
+                    </div>
+                    <div class="booking-form">
+                        <h3>Забронировать тур</h3>
+                        <form id="bookingTour1">
+                            <input type="text" placeholder="Ваше имя" required>
+                            <input type="tel" placeholder="Телефон" required>
+                            <input type="email" placeholder="Email">
+                            <input type="number" placeholder="Количество человек">
+                            <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                        </form>
+                    </div>
+                    <a href="index.html" class="back-link">← Назад ко всем турам</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="container footer-inner"><div class="footer-logo">Tour<span>Baranovichi</span></div><div class="footer-copy">© 2025 Местные туры Барановичи</div></div></footer>
+    <script>
+        document.getElementById('bookingTour1')?.addEventListener('submit', (e) => { e.preventDefault(); alert('Заявка отправлена! Мы свяжемся с вами.'); e.target.reset(); });
+        const toggle = document.querySelector('.mobile-toggle');
+        const menu = document.querySelector('.nav-menu');
+        if(toggle) toggle.onclick = () => menu.classList.toggle('active');
+    </script>
+</body>
+</html>

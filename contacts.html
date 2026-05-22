@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Местные туры Барановичи</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* дополнительные стили для страницы контактов */
+        .contacts-hero {
+            background: linear-gradient(135deg, #2c7a4d 0%, #1e4a2f 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .contacts-hero h1 {
+            color: white;
+            background: none;
+        }
+        .contacts-main {
+            padding: 4rem 0;
+        }
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 32px;
+            box-shadow: var(--shadow-sm);
+        }
+        .info-card h3 {
+            margin-bottom: 1.5rem;
+            color: var(--green-deep);
+        }
+        .contact-line {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+        .contact-line .emoji {
+            font-size: 1.4rem;
+            width: 2rem;
+        }
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+        .social-icons a {
+            background: var(--green-light);
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--green-deep);
+            transition: var(--transition);
+        }
+        .social-icons a:hover {
+            background: var(--green-soft);
+            color: white;
+        }
+        .work-hours {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e0e0e0;
+        }
+        .work-hours p {
+            margin: 0.5rem 0;
+        }
+        .map-container {
+            margin-top: 1rem;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+        }
+        .callback-form {
+            background: var(--warm-gray);
+            padding: 2rem;
+            border-radius: 32px;
+        }
+        .callback-form input, .callback-form textarea {
+            width: 100%;
+            padding: 0.9rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 28px;
+            font-family: inherit;
+        }
+        .callback-form button {
+            width: 100%;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--green-soft);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            .contacts-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">Tour<span>Baranovichi</span></div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index.html#tours">Туры</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="contacts-hero">
+        <div class="container">
+            <h1>Свяжитесь с нами</h1>
+            <p>Будем рады ответить на ваши вопросы и помочь с выбором тура</p>
+        </div>
+    </section>
+
+    <section class="contacts-main">
+        <div class="container">
+            <div class="contacts-grid">
+                <!-- Левая колонка: контактная информация -->
+                <div class="info-card">
+                    <h3>📞 Как нас найти</h3>
+                    <div class="contact-line">
+                        <span class="emoji">📍</span>
+                        <span>г. Барановичи, ул. Советская, 12, офис 5</span>
+                    </div>
+                    <div class="contact-line">
+                        <span class="emoji">📱</span>
+                        <span>+375 (29) 123-45-67 (Viber, WhatsApp, Telegram)</span>
+                    </div>
+                    <div class="contact-line">
+                        <span class="emoji">✉️</span>
+                        <span>tours@baranovichi-local.by</span>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#">Instagram</a>
+                        <a href="#">Telegram</a>
+                        <a href="#">WhatsApp</a>
+                        <a href="#">VK</a>
+                    </div>
+                    <div class="work-hours">
+                        <h3>🕒 Часы работы</h3>
+                        <p>Пн-Пт: 10:00 – 19:00</p>
+                        <p>Сб: 11:00 – 17:00</p>
+                        <p>Вс: выходной (экскурсии по предварительной записи)</p>
+                    </div>
+                </div>
+
+                <!-- Правая колонка: форма обратной связи -->
+                <div class="callback-form">
+                    <h3>Напишите нам</h3>
+                    <form id="contactsForm">
+                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="tel" placeholder="Телефон" required>
+                        <input type="email" placeholder="Email">
+                        <textarea rows="3" placeholder="Сообщение или вопрос о туре"></textarea>
+                        <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                        <p class="form-note" style="margin-top: 1rem; font-size: 0.7rem;">Мы свяжемся с вами в течение рабочего дня</p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Карта -->
+            <div class="info-card" style="margin-top: 2rem;">
+                <h3>🗺️ Как добраться</h3>
+                <p>Мы находимся в центре города, рядом с парком им. Грицевца. Общественный транспорт: автобусы №1, 5, 10 до остановки "Советская".</p>
+                <div class="map-container">
+                    <!-- Вставка карты OpenStreetMap с координатами Барановичей (пример) -->
+                    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=25.9785%2C53.1327%2C26.0185%2C53.1527&layer=mapnik&marker=53.1427%2C25.9985" allowfullscreen></iframe>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-muted);">* Точное расположение офиса можно уточнить по телефону перед визитом.</p>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="index.html" class="back-link">← Вернуться на главную</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-logo">Tour<span>Baranovichi</span></div>
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="index.html#tours">Туры</a>
+                <a href="about.html">О нас</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+            <div class="footer-copy">© 2025 Местные туры Барановичи</div>
+        </div>
+    </footer>
+
+    <script>
+        // мобильное меню
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                mobileToggle.classList.toggle('active');
+            });
+        }
+
+        // обработка формы
+        const contactsForm = document.getElementById('contactsForm');
+        if (contactsForm) {
+            contactsForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Спасибо за сообщение! Мы ответим вам в ближайшее время.');
+                contactsForm.reset();
+            });
+        }
+
+        // плавная прокрутка для якорных ссылок (если есть)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === "#" || href === "") return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

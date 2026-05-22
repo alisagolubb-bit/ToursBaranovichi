@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Местные туры | Барановичи</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="author" href="https://vk.com/yourprofile">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .form-row {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        .form-row input {
+            display: block;
+            width: 100%;
+            padding: 0 10px;
+            line-height: 50px;
+            font-family: 'Inter', sans-serif;
+            background: none;
+            border-width: 0;
+            border-bottom: 2px solid #ddd;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+        .form-row label {
+            position: absolute;
+            left: 13px;
+            color: #9d959d;
+            font-size: 18px;
+            font-weight: 400;
+            transform: translateY(-35px);
+            transition: all 0.2s ease;
+            pointer-events: none;
+            background: transparent;
+        }
+        .form-row input:focus {
+            border-color: var(--terracotta);
+        }
+        .form-row input:focus + label,
+        .form-row input:valid + label {
+            transform: translateY(-60px);
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--terracotta);
+        }
+        .auth-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .auth-tab {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+        .auth-tab.active {
+            color: var(--terracotta);
+            border-bottom: 2px solid var(--terracotta);
+            margin-bottom: -2px;
+        }
+        .auth-pane {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .auth-pane.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .social-register {
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        .social-icons-small {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+        .social-icons-small a {
+            background: #f0f0f0;
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #333;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">Tour<span>Baranovichi</span></div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" title="Главная">Главная</a></li>
+                    <li><a href="#tours" title="Наши туры">Туры</a></li>
+                    <li><a href="about.html" title="О компании">О нас</a></li>
+                    <li><a href="contacts.html" title="Контакты">Контакты</a></li>
+                    <li><a href="developer.html" title="Разработчик">Разработчик</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></div>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">📍 Местные туры</span>
+                <h1>Открой Барановичи <br>по-новому</h1>
+                <p>Авторские экскурсии, уютные городские маршруты и настоящая атмосфера железнодорожной столицы Беларуси. Путешествуй с душой вместе с локальными гидами.</p>
+                <div class="hero-buttons">
+                    <a href="#tours" class="btn btn-primary">Выбрать тур</a>
+                    <a href="about.html" class="btn btn-outline">О команде</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="ph16.webp" alt="Панорама Барановичей" title="Центр Барановичей">
+            </div>
+        </div>
+    </section>
+
+    <section class="tours" id="tours">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">—— Наши предложения</span>
+                <h2>Местные туры <br>по Барановичам</h2>
+                <p>Выбери маршрут, который тебе по душе.</p>
+            </div>
+            <div class="tours-grid">
+                <!-- Тур 1: Железная дорога -->
+                <div class="tour-card">
+                    <div class="tour-img"><img src="ph17.jpg" alt="Железнодорожный вокзал" title="Вокзал Барановичи"></div>
+                    <div class="tour-info"><h3>Легенды железной дороги</h3><p class="tour-desc">Прогулка по вокзалу, депо и тайнам узла.</p><div class="tour-meta"><span>⏱ 2.5 ч</span><span>👥 до 15</span></div><a href="tour1.html" class="btn-tour">Подробнее →</a></div>
+                </div>
+                <!-- Тур 2: Архитектура -->
+                <div class="tour-card">
+                    <div class="tour-img"><img src="ph1.jpg" alt="Архитектура" title="Старый город"></div>
+                    <div class="tour-info"><h3>Архитектурные жемчужины</h3><p class="tour-desc">Костелы, усадьбы и деревянная застройка.</p><div class="tour-meta"><span>⏱ 2 ч</span><span>👥 до 20</span></div><a href="tour2.html" class="btn-tour">Подробнее →</a></div>
+                </div>
+                <!-- Тур 3: Гастрономия -->
+                <div class="tour-card">
+                    <div class="tour-img"><img src="ph3.jpg" alt="Белорусская кухня" title="Драники"></div>
+                    <div class="tour-info"><h3>Гастрономический уикенд</h3><p class="tour-desc">Драники, сыры, крафтовое пиво.</p><div class="tour-meta"><span>⏱ 3 ч</span><span>👥 до 12</span></div><a href="tour3.html" class="btn-tour">Подробнее →</a></div>
+                </div>
+                <!-- Тур 4: Военный -->
+                <div class="tour-card">
+                    <div class="tour-img"><img src="ph2.jpg" alt="ДОТ" title="Оборонительные сооружения"></div>
+                    <div class="tour-info"><h3>Военный Барановичи</h3><p class="tour-desc">ДОТы, мемориалы, истории героев.</p><div class="tour-meta"><span>⏱ 3 ч</span><span>👥 до 20</span></div><a href="tour4.html" class="btn-tour">Подробнее →</a></div>
+                </div>
+                <!-- Тур 5: Детский -->
+                <div class="tour-card">
+                    <div class="tour-img"><img src="ph7.jpg" alt="Детский квест" title="Игры на свежем воздухе"></div>
+                    <div class="tour-info"><h3>Детский квест «Тайны старого города»</h3><p class="tour-desc">Игры, загадки, поиск сокровищ.</p><div class="tour-meta"><span>⏱ 2 ч</span><span>👥 до 10</span></div><a href="tour5.html" class="btn-tour">Подробнее →</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма регистрации / входа -->
+    <section class="auth-form" style="padding: 4rem 0; background: var(--warm-gray);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">—— Доступ к личному кабинету</span>
+                <h2>Вход / Регистрация</h2>
+                <p>Зарегистрируйтесь, чтобы сохранить историю бронирований и получать персональные скидки</p>
+            </div>
+            <div class="auth-container" style="max-width: 500px; margin: 0 auto; background: white; padding: 2rem; border-radius: 32px; box-shadow: var(--shadow-md);">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Вход</button>
+                    <button class="auth-tab" data-tab="register">Регистрация</button>
+                </div>
+                <div id="loginPane" class="auth-pane active">
+                    <form method="post" action="404.html">
+                        <div class="form-row"><input type="email" id="loginEmail" required autocomplete="off"><label for="loginEmail">Email</label></div>
+                        <div class="form-row"><input type="password" id="loginPassword" required><label for="loginPassword">Пароль</label></div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Войти</button>
+                        <div class="social-register"><span>Или войдите через соцсети</span><div class="social-icons-small"><a href="#">VK</a><a href="#">Google</a><a href="#">Facebook</a></div></div>
+                    </form>
+                </div>
+                <div id="registerPane" class="auth-pane">
+                    <form method="post" action="404.html">
+                        <div class="form-row"><input type="text" id="regName" required autocomplete="off"><label for="regName">Имя и фамилия</label></div>
+                        <div class="form-row"><input type="email" id="regEmail" required autocomplete="off"><label for="regEmail">Email</label></div>
+                        <div class="form-row"><input type="tel" id="regPhone" required><label for="regPhone">Телефон</label></div>
+                        <div class="form-row"><input type="password" id="regPassword" required><label for="regPassword">Пароль</label></div>
+                        <div class="form-row"><input type="password" id="regConfirm" required><label for="regConfirm">Подтверждение пароля</label></div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Зарегистрироваться</button>
+                        <p class="form-note" style="margin-top: 1rem;">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-logo">Tour<span>Baranovichi</span></div>
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="#tours">Туры</a>
+                <a href="about.html">О нас</a>
+                <a href="contacts.html">Контакты</a>
+                <a href="developer.html">Разработчик</a>
+                <a href="privacy.html">Политика конфиденциальности</a>
+                <a href="sitemap.html">Карта сайта</a>
+                <a href="http://www.bartc.by" target="_blank" rel="noopener">Колледж БартЦ</a>
+            </div>
+            <div class="social-links">
+                <a href="#" title="Instagram">Instagram</a>
+                <a href="#" title="Смородина👹">Смородина👹</a>
+                <a href="#" title="VK">VK</a>
+            </div>
+            <div class="footer-copy">
+                © 2025 Местные туры Барановичи | Все права защищены<br>
+                <a href="source.zip" download>Скачать исходный код сайта (ZIP)</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('mobileToggle');
+        const menu = document.querySelector('.nav-menu');
+        if(toggle) toggle.onclick = () => menu.classList.toggle('active');
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if(href === "#" || href === "") return;
+                const target = document.querySelector(href);
+                if(target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    if(menu.classList.contains('active')) menu.classList.remove('active');
+                }
+            });
+        });
+        const tabs = document.querySelectorAll('.auth-tab');
+        const panes = { login: document.getElementById('loginPane'), register: document.getElementById('registerPane') };
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-tab');
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                Object.values(panes).forEach(pane => pane.classList.remove('active'));
+                panes[target].classList.add('active');
+            });
+        });
+        const regForm = document.querySelector('#registerPane form');
+        if(regForm) {
+            regForm.addEventListener('submit', function(e) {
+                const pwd = document.getElementById('regPassword').value;
+                const conf = document.getElementById('regConfirm').value;
+                if(pwd !== conf) {
+                    e.preventDefault();
+                    alert('Пароли не совпадают!');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

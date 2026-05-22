@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас | Местные туры Барановичи</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* дополнительные стили для страницы о нас */
+        .about-hero {
+            background: linear-gradient(135deg, #1e4a2f 0%, #2c7a4d 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .about-hero h1 {
+            color: white;
+            background: none;
+        }
+        .about-detail {
+            padding: 4rem 0;
+        }
+        .mission-box {
+            background: var(--green-light);
+            padding: 2rem;
+            border-radius: 32px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .team-card {
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            padding: 1.5rem;
+            transition: var(--transition);
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        .team-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid var(--green-soft);
+        }
+        .team-card h3 {
+            margin-bottom: 0.25rem;
+        }
+        .team-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .values-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        .value-item {
+            background: var(--warm-gray);
+            padding: 1rem 2rem;
+            border-radius: 60px;
+            font-weight: 500;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--green-soft);
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">Tour<span>Baranovichi</span></div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index.html#tours">Туры</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="index.html#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="container">
+            <h1>О нашей команде</h1>
+            <p>Местные гиды, которые влюбляют в Барановичи</p>
+        </div>
+    </section>
+
+    <section class="about-detail">
+        <div class="container">
+            <div class="mission-box">
+                <h2>Наша миссия</h2>
+                <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Показать Барановичи не как транзитный пункт, а как город с богатой историей, самобытной культурой и душевными людьми. Мы хотим, чтобы каждый гость увёз частичку нашего тепла.</p>
+            </div>
+
+            <div style="text-align: center; margin: 3rem 0;">
+                <h2>Почему именно мы?</h2>
+                <div class="values-list">
+                    <span class="value-item">🏡 Местные жители</span>
+                    <span class="value-item">📜 Авторские экскурсии</span>
+                    <span class="value-item">❤️ Индивидуальный подход</span>
+                    <span class="value-item">🌿 Эко-маршруты</span>
+                </div>
+            </div>
+
+            <h2 style="text-align: center;">Наша команда</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="https://placehold.co/200x200/2c7a4d/ffffff?text=Анна" alt="Анна">
+                    <h3>Анна Ковальчук</h3>
+                    <p>Основатель и гид</p>
+                    <p style="font-size: 0.85rem;">Краевед со стажем 10 лет, знает каждый уголок Барановичей</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://placehold.co/200x200/b95b0e/ffffff?text=Дмитрий" alt="Дмитрий">
+                    <h3>Дмитрий Лешкевич</h3>
+                    <p>Гид-историк</p>
+                    <p style="font-size: 0.85rem;">Специалист по архитектуре и железнодорожной истории</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://placehold.co/200x200/6b4c3a/ffffff?text=Елена" alt="Елена">
+                    <h3>Елена Савицкая</h3>
+                    <p>Гастро-гид</p>
+                    <p style="font-size: 0.85rem;">Организует дегустации и мастер-классы по белорусской кухне</p>
+                </div>
+            </div>
+
+            <div style="background: var(--warm-gray); padding: 2rem; border-radius: 32px; margin: 2rem 0;">
+                <h3>📅 Как мы работаем</h3>
+                <p>Мы проводим экскурсии круглый год. Группы до 20 человек, возможны индивидуальные туры. Предварительная запись за 2 дня. Работаем с 10:00 до 19:00 ежедневно, кроме праздников.</p>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="index.html#contacts" class="btn btn-primary">Связаться с нами</a>
+                <br>
+                <a href="index.html" class="back-link">← Вернуться на главную</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-logo">Tour<span>Baranovichi</span></div>
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="index.html#tours">Туры</a>
+                <a href="about.html">О нас</a>
+                <a href="index.html#contacts">Контакты</a>
+            </div>
+            <div class="footer-copy">© 2025 Местные туры Барановичи</div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                mobileToggle.classList.toggle('active');
+            });
+        }
+        // плавная прокрутка для ссылок (если есть якоря)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === "#" || href === "") return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

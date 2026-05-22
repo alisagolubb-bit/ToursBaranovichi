@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тур: Архитектурные жемчужины Барановичей</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .tour-hero { background: linear-gradient(135deg, #4a3b2c, #7a5a3a); color: white; padding: 4rem 0; text-align: center; }
+        .tour-hero h1 { color: white; background: none; }
+        .tour-detail { padding: 4rem 0; }
+        .tour-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+        .tour-images img { width: 100%; border-radius: 28px; margin-bottom: 1rem; box-shadow: var(--shadow-md); }
+        .price-box { background: var(--green-light); padding: 1.5rem; border-radius: 28px; margin: 2rem 0; text-align: center; }
+        .price { font-size: 2rem; font-weight: 800; color: var(--green-deep); }
+        .booking-form { background: var(--warm-gray); padding: 2rem; border-radius: 32px; margin-top: 2rem; }
+        .back-link { display: inline-block; margin-top: 2rem; color: var(--green-soft); text-decoration: none; font-weight: 600; }
+        @media (max-width: 768px) { .tour-detail-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">Tour<span>Baranovichi</span></div>
+            <nav><ul class="nav-menu"><li><a href="index.html">Главная</a></li><li><a href="index.html#tours">Туры</a></li><li><a href="index.html#about">О нас</a></li><li><a href="index.html#contacts">Контакты</a></li></ul></nav>
+            <div class="mobile-toggle"><span></span><span></span><span></span></div>
+        </div>
+    </header>
+
+    <section class="tour-hero">
+        <div class="container">
+            <h1>Архитектурные жемчужины</h1>
+            <p>Костелы, усадьбы и старая застройка</p>
+        </div>
+    </section>
+
+    <section class="tour-detail">
+        <div class="container">
+            <div class="tour-detail-grid">
+                <div class="tour-images">
+                    <img src="ph12.jpg" alt="Костёл">
+                    <img src="ph13.jpg" alt="Усадьба">
+                </div>
+                <div class="tour-info-block">
+                    <h2>Описание тура</h2>
+                    <p>Прогулка по исторической части Барановичей: неоклассицизм, модерн, деревянное зодчество. Вы увидите костёл Святого Креста, старую застройку улицы Советской и услышите истории о знаменитых семьях города.</p>
+                    <h3>🏛️ Что вас ждёт:</h3>
+                    <ul>
+                        <li>Костел и церковь с уникальными интерьерами</li>
+                        <li>Прогулка по купеческим усадьбам XIX века</li>
+                        <li>Секретные дворики и атмосферные переулки</li>
+                        <li>Фотолокации в стиле ретро</li>
+                    </ul>
+                    <div class="price-box">
+                        <div class="price">30 BYN / чел</div>
+                        <p>Длительность: 2 часа | Группа до 20 чел</p>
+                    </div>
+                    <div class="booking-form">
+                        <h3>Забронировать тур</h3>
+                        <form id="bookingTour2">
+                            <input type="text" placeholder="Ваше имя" required>
+                            <input type="tel" placeholder="Телефон" required>
+                            <input type="email" placeholder="Email">
+                            <input type="number" placeholder="Количество человек">
+                            <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                        </form>
+                    </div>
+                    <a href="index.html" class="back-link">← Назад ко всем турам</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="container footer-inner"><div class="footer-logo">Tour<span>Baranovichi</span></div><div class="footer-copy">© 2025 Местные туры Барановичи</div></div></footer>
+    <script>
+        document.getElementById('bookingTour2')?.addEventListener('submit', (e) => { e.preventDefault(); alert('Заявка отправлена! Мы свяжемся с вами.'); e.target.reset(); });
+        const toggle = document.querySelector('.mobile-toggle');
+        const menu = document.querySelector('.nav-menu');
+        if(toggle) toggle.onclick = () => menu.classList.toggle('active');
+    </script>
+</body>
+</html>
